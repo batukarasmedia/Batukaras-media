@@ -3,115 +3,217 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Batukaras Media — Reservasi Wisata</title>
-<meta name="description" content="Batukaras Media — reservasi wisata Batukaras, Green Canyon, Pangandaran dan destinasi wisata Jawa Barat.">
+<title>BATUKARAS MEDIA — Reservasi Wisata</title>
+
 <style>
-:root{--ink:#102027;--muted:#65747b;--line:#e7ecee;--paper:#fff;--soft:#f4f7f7;--accent:#0d6b68;--accent2:#e7f4f2}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:var(--ink);background:var(--paper)}
-a{text-decoration:none;color:inherit}.container{width:min(1120px,92%);margin:auto}
-nav{position:fixed;top:0;left:0;right:0;z-index:20;background:rgba(255,255,255,.92);backdrop-filter:blur(14px);border-bottom:1px solid rgba(0,0,0,.05)}
-.navin{height:70px;display:flex;align-items:center;justify-content:space-between}.brand{font-weight:900;letter-spacing:.8px;font-size:19px}.brand span{color:var(--accent)}
-.links{display:flex;gap:24px;font-size:14px;font-weight:700}.links a:hover{color:var(--accent)}
-.btn{display:inline-flex;align-items:center;justify-content:center;border:0;border-radius:12px;padding:13px 18px;background:var(--accent);color:#fff;font-weight:800;cursor:pointer}.btn.light{background:#fff;color:var(--ink);border:1px solid var(--line)}
-.hero{min-height:650px;padding:150px 0 80px;background:linear-gradient(90deg,rgba(4,23,28,.78),rgba(4,23,28,.25)),url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1800&q=85') center/cover;color:white}
-.hero h1{font-size:clamp(42px,7vw,78px);line-height:.98;max-width:760px;margin:0 0 22px;letter-spacing:-2px}.hero p{font-size:18px;line-height:1.7;max-width:620px;color:#eef5f5}.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}.hero .btn.light{background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.4);color:#fff}
-section{padding:80px 0}.eyebrow{color:var(--accent);font-size:12px;font-weight:900;letter-spacing:2px;text-transform:uppercase}.title{font-size:clamp(30px,4vw,46px);margin:9px 0 12px;letter-spacing:-1px}.sub{color:var(--muted);line-height:1.7;max-width:700px}
-.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:32px}.card{border:1px solid var(--line);border-radius:18px;overflow:hidden;background:#fff;box-shadow:0 10px 30px rgba(16,32,39,.05)}.photo{height:190px;background:#dce7e7 center/cover}.cardbody{padding:20px}.card h3{margin:0 0 7px;font-size:21px}.card p{color:var(--muted);line-height:1.6;font-size:14px;margin:0 0 15px}.tag{display:inline-block;background:var(--accent2);color:var(--accent);padding:7px 10px;border-radius:99px;font-size:12px;font-weight:800;margin:3px 4px 0 0}
-.booking{background:var(--soft)}.bookbox{display:grid;grid-template-columns:1fr 1.15fr;gap:28px;align-items:start}.info{background:var(--ink);color:#fff;border-radius:22px;padding:34px}.info h2{font-size:35px;margin:8px 0 15px}.info p{color:#cbd7d9;line-height:1.7}.checks{display:grid;gap:12px;margin-top:25px}.checks div{color:#eef5f5}
-.form{background:#fff;border:1px solid var(--line);border-radius:22px;padding:28px;box-shadow:0 14px 35px rgba(16,32,39,.06)}.row{display:grid;grid-template-columns:1fr 1fr;gap:14px}.field{margin-bottom:15px}.field label{display:block;font-size:12px;font-weight:900;margin-bottom:7px}.field input,.field select,.field textarea{width:100%;padding:13px 14px;border:1px solid #dce3e5;border-radius:11px;font:inherit;outline:none}.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--accent)}.total{display:flex;justify-content:space-between;align-items:center;background:var(--accent2);padding:16px;border-radius:12px;margin:5px 0 16px}.total strong{font-size:22px;color:var(--accent)}
-.gallery{display:grid;grid-template-columns:2fr 1fr 1fr;grid-template-rows:190px 190px;gap:10px}.gallery div{border-radius:16px;background:center/cover}.gallery .big{grid-row:span 2}
-footer{background:#0b181c;color:#d5e0e2;padding:55px 0 25px}.foot{display:flex;justify-content:space-between;gap:30px}.foot h3{color:#fff;margin-top:0}.foot p{line-height:1.7;color:#9fb0b4}.copy{border-top:1px solid #26363a;margin-top:35px;padding-top:20px;font-size:12px;color:#819297}
-.wa{position:fixed;right:20px;bottom:20px;background:#1fa855;color:#fff;padding:14px 18px;border-radius:999px;font-weight:900;box-shadow:0 10px 30px rgba(0,0,0,.2);z-index:30}
-@media(max-width:800px){.links{display:none}.hero{min-height:620px}.grid,.bookbox{grid-template-columns:1fr}.gallery{grid-template-columns:1fr 1fr;grid-template-rows:160px 160px}.gallery .big{grid-row:auto;grid-column:span 2}.row{grid-template-columns:1fr}.foot{flex-direction:column}}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Arial,sans-serif;color:#102027;background:#fff}
+a{text-decoration:none;color:inherit}
+nav{position:sticky;top:0;z-index:99;background:#fff;padding:14px 5%;display:flex;justify-content:space-between;align-items:center;box-shadow:0 2px 15px #0002}
+.logo{height:48px;width:auto}
+.btn{background:#087f78;color:white;padding:14px 22px;border-radius:30px;font-weight:bold;border:0;display:inline-block}
+.hero{min-height:650px;background:linear-gradient(#0006,#0007),url('jetski-drone.jpg') center/cover;display:flex;align-items:center;color:#fff;padding:70px 6%}
+.hero-content{max-width:750px}
+.hero small{letter-spacing:3px;font-weight:bold}
+.hero h1{font-size:clamp(40px,8vw,78px);line-height:.98;margin:18px 0}
+.hero p{font-size:20px;line-height:1.6;margin-bottom:25px}
+section{padding:65px 6%}
+.title{font-size:38px;margin:10px 0 35px}
+.subtitle{color:#16857e;font-weight:bold;letter-spacing:3px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:22px}
+.card{background:#fff;border-radius:18px;overflow:hidden;box-shadow:0 8px 30px #0001;border:1px solid #eee}
+.card img{width:100%;height:210px;object-fit:cover}
+.card-content{padding:22px}
+.card h3{font-size:23px;margin-bottom:10px}
+.price{font-size:24px;font-weight:bold;color:#087f78;margin:12px 0}
+.card p{line-height:1.6;color:#526065}
+.booking{background:#eef8f7}
+.form{max-width:650px;margin:auto;background:#fff;padding:28px;border-radius:20px;box-shadow:0 10px 35px #0001}
+input,select{width:100%;padding:15px;margin:7px 0 15px;border:1px solid #ccd6d6;border-radius:10px;font-size:16px}
+label{font-weight:bold}
+.submit{width:100%;padding:16px;background:#18a957;color:white;border:0;border-radius:12px;font-size:18px;font-weight:bold}
+footer{background:#102027;color:#fff;padding:40px 6%;text-align:center;line-height:1.8}
+.wa{position:fixed;right:18px;bottom:18px;background:#20b957;color:#fff;padding:16px 22px;border-radius:40px;font-weight:bold;z-index:100;box-shadow:0 5px 20px #0003}
+@media(max-width:600px){
+nav{padding:12px 18px}
+.logo{height:42px}
+.hero{min-height:620px;padding:60px 25px}
+.hero h1{font-size:45px}
+.hero p{font-size:18px}
+section{padding:50px 20px}
+.title{font-size:32px}
+}
 </style>
 </head>
+
 <body>
-<nav><div class="container navin"><a class="brand" href="#">BATUKARAS <span>MEDIA</span></a><div class="links"><a href="#destinasi">Destinasi</a><a href="#paket">Paket</a><a href="#reservasi">Reservasi</a><a href="#galeri">Galeri</a></div><a class="btn" href="#reservasi">Booking</a></div></nav>
+
+<nav>
+<img src="logo.png" class="logo" alt="Batukaras Media">
+<a href="#booking" class="btn">Booking</a>
+</nav>
 
 <header class="hero">
-<div class="container">
-<div class="eyebrow" style="color:#c6e9e6">Travel • Adventure • Experience</div>
-<h1>Jelajahi pesisir Jawa Barat bersama Batukaras Media.</h1>
-<p>Temukan pantai, sungai, Green Canyon, aktivitas bahari, freediving, jetski, paddle dan berbagai pengalaman wisata dalam satu tempat.</p>
-<div class="hero-actions"><a class="btn" href="#reservasi">Reservasi Sekarang</a><a class="btn light" href="#destinasi">Lihat Destinasi</a></div>
+<div class="hero-content">
+<small>TRAVEL • ADVENTURE • EXPERIENCE</small>
+<h1>Jelajahi Batukaras bersama BATUKARAS MEDIA.</h1>
+<p>
+Nikmati berbagai pilihan perjalanan, wisata pantai,
+Green Canyon dan pengalaman bahari dengan layanan
+dokumentasi perjalanan.
+</p>
+<a href="#booking" class="btn">Reservasi Sekarang</a>
 </div>
 </header>
 
-<section id="destinasi"><div class="container">
-<div class="eyebrow">Explore</div><h2 class="title">Destinasi pilihan</h2><p class="sub">Pilih destinasi, tentukan paket, lalu kirim data reservasi. Daftar ini bisa terus ditambah sesuai produk wisata Batukaras Media.</p>
-<div class="grid">
-<div class="card"><div class="photo" style="background-image:url('https://images.unsplash.com/photo-1502680390469-be75c86b636f?auto=format&fit=crop&w=900&q=80')"></div><div class="cardbody"><h3>Batukaras</h3><p>Pantai, surfing, sunset, jetski, paddle dan aktivitas bahari.</p><span class="tag">Pantai</span><span class="tag">Bahari</span></div></div>
-<div class="card"><div class="photo" style="background-image:url('https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=900&q=80')"></div><div class="cardbody"><h3>Green Canyon</h3><p>Perahu wisata, semi body rafting dan body rafting.</p><span class="tag">Adventure</span><span class="tag">River</span></div></div>
-<div class="card"><div class="photo" style="background-image:url('https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=900&q=80')"></div><div class="cardbody"><h3>Pangandaran</h3><p>Eksplorasi pantai, wisata laut dan pengalaman liburan keluarga.</p><span class="tag">Family</span><span class="tag">Beach</span></div></div>
-<div class="card"><div class="photo" style="background-image:url('https://images.unsplash.com/photo-1439405326854-014607f694d7?auto=format&fit=crop&w=900&q=80')"></div><div class="cardbody"><h3>Citumang</h3><p>Petualangan sungai dan aktivitas outdoor yang seru.</p><span class="tag">Outdoor</span></div></div>
-<div class="card"><div class="photo" style="background-image:url('https://images.unsplash.com/photo-1505881502353-a1986add3762?auto=format&fit=crop&w=900&q=80')"></div><div class="cardbody"><h3>Batu Hiu</h3><p>Panorama pesisir dan spot menikmati suasana pantai.</p><span class="tag">Nature</span></div></div>
-<div class="card"><div class="photo" style="background-image:url('https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=900&q=80')"></div><div class="cardbody"><h3>Madasari & Karapyak</h3><p>Destinasi pesisir untuk menikmati laut dan pemandangan.</p><span class="tag">Coastal</span></div></div>
-</div></div></section>
-
-<section id="paket" style="padding-top:20px"><div class="container">
-<div class="eyebrow">Pricelist</div><h2 class="title">Paket & aktivitas wisata</h2>
-<p class="sub">Harga dapat dipilih langsung pada formulir reservasi. Untuk paket Green Canyon, minimum peserta mengikuti ketentuan masing-masing paket.</p>
+<section>
+<div class="subtitle">EXPLORE</div>
+<h2 class="title">Destinasi & Aktivitas</h2>
 
 <div class="grid">
-<div class="card"><div class="cardbody"><h3>🛶 Jetski</h3><p>Rp700.000</p><span class="tag">Batukaras</span></div></div>
-<div class="card"><div class="cardbody"><h3>🏄 Paddleboard Single</h3><p>Rp300.000</p><span class="tag">Per unit</span></div></div>
-<div class="card"><div class="cardbody"><h3>🏄 Paddleboard Tandem</h3><p>Rp350.000</p><span class="tag">Per unit</span></div></div>
-<div class="card"><div class="cardbody"><h3>🎥 Drone Paddleboard</h3><p>Rp250.000 / baterai</p><span class="tag">Dokumentasi</span></div></div>
-<div class="card"><div class="cardbody"><h3>🏄 Surfing Lesson</h3><p>Rp500.000</p><span class="tag">Lesson</span></div></div>
-<div class="card"><div class="cardbody"><h3>🤿 Freediving</h3><p>Rp700.000</p><span class="tag">Bahari</span></div></div>
-<div class="card"><div class="cardbody"><h3>🤿 Scuba Diving</h3><p>Rp1.500.000</p><span class="tag">Diving</span></div></div>
-<div class="card"><div class="cardbody"><h3>🐠 Snorkeling</h3><p>Rp150.000 / orang</p><span class="tag">Bahari</span></div></div>
+
+<div class="card">
+<img src="jetski.jpg" alt="Jetski Batukaras">
+<div class="card-content">
+<h3>Jetski</h3>
+<div class="price">Rp700.000</div>
+<p>Jetski Seadoo GTX Pro 1.800cc. Termasuk guide, lifejacket dan dokumentasi.</p>
+</div>
 </div>
 
-<div style="margin-top:60px">
-<div class="eyebrow">Green Canyon</div><h2 class="title">WISATA GREENCANYON</h2>
-<div class="grid">
-<div class="card"><div class="cardbody"><h3>🚣 Paket Perahu</h3><p><b>Rp300.000 / perahu</b><br>Tanpa berenang • 1–5 orang</p><p>✓ Tiket & asuransi<br>✓ Life jacket<br>✓ Pemandu<br>✓ Dokumentasi by DJI Action 4</p></div></div>
-<div class="card"><div class="cardbody"><h3>🌿 Paket 1 — Semi Bodyrafting</h3><p><b>Rp150.000 / orang</b><br>Minimal 5 orang • Short track 4 km • ±1,5 jam</p><p>✓ Tiket & asuransi<br>✓ Life jacket<br>✓ Transport perahu<br>✓ Pemandu<br>✓ Dokumentasi HP wisatawan<br>✓ Dokumentasi DJI Action<br>✓ Makan siang</p></div></div>
-<div class="card"><div class="cardbody"><h3>🌊 Paket 2 — Bodyrafting Standard</h3><p><b>Rp250.000 / orang</b><br>Minimal 5 orang • Track 5 km • 2–3 jam</p><p>✓ Tiket masuk & asuransi<br>✓ Mobil pick up pengantar<br>✓ Peralatan bodyrafting<br>✓ Pelampung & perahu<br>✓ Pemandu<br>✓ Dokumentasi HP wisatawan<br>✓ Dokumentasi DJI Action 4<br>✓ Makan siang</p></div></div>
-<div class="card"><div class="cardbody"><h3>🏞️ Paket 3 — Bodyrafting Longtrack</h3><p><b>Rp275.000 / orang</b><br>Minimal 5 orang • Track 10 km • 4–5 jam</p><p>✓ Tiket masuk & asuransi<br>✓ Mobil pick up pengantar<br>✓ Peralatan bodyrafting<br>✓ Pelampung & perahu<br>✓ Pemandu<br>✓ Dokumentasi HP wisatawan<br>✓ Dokumentasi DJI Action 4<br>✓ Makan siang</p></div></div>
-<div class="card"><div class="cardbody"><h3>🌴 Paket 4 — Fulltrack Bodyrafting</h3><p><b>Rp300.000 / orang</b><br>Minimal 5 orang • Track 10 km • 4–5 jam</p><p>✓ Tiket masuk & asuransi<br>✓ Mobil pick up pengantar<br>✓ Peralatan bodyrafting<br>✓ Pelampung & perahu<br>✓ Pemandu<br>✓ Dokumentasi HP wisatawan<br>✓ Dokumentasi DJI Action 4<br>✓ Makan siang<br>✓ Kelapa muda</p></div></div>
-</div></div></div></section>
+<div class="card">
+<img src="paddle.jpg" alt="Paddleboard Batukaras">
+<div class="card-content">
+<h3>Paddleboard</h3>
+<div class="price">Mulai Rp300.000</div>
+<p>Single dan tandem paddleboard dengan guide serta dokumentasi.</p>
+</div>
+</div>
 
-<section class="booking" id="reservasi"><div class="container"><div class="bookbox">
-<div class="info"><div class="eyebrow" style="color:#8bd2cd">Online Booking</div><h2>Reservasi wisata jadi lebih mudah.</h2><p>Isi formulir di samping. Setelah dikirim, data akan dibuat menjadi pesan WhatsApp untuk konfirmasi dengan Batukaras Media.</p><div class="checks"><div>✓ Pilih destinasi & paket</div><div>✓ Tentukan tanggal perjalanan</div><div>✓ Total harga otomatis</div><div>✓ Konfirmasi langsung via WhatsApp</div></div></div>
-<form class="form" onsubmit="book(event)">
-<div class="row"><div class="field"><label>NAMA</label><input id="nama" required placeholder="Nama lengkap"></div><div class="field"><label>WHATSAPP</label><input id="wauser" required placeholder="08xxxxxxxxxx"></div></div>
-<div class="row"><div class="field"><label>DESTINASI</label><select id="dest" onchange="updatePrice()"><option value="Batukaras">Batukaras</option><option value="Green Canyon">Green Canyon</option><option value="Pangandaran">Pangandaran</option><option value="Citumang">Citumang</option><option value="Batu Hiu">Batu Hiu</option><option value="Madasari">Madasari</option><option value="Karapyak">Karapyak</option></select></div><div class="field"><label>PAKET</label><select id="paketSelect" onchange="updatePrice()">
-<option value="700000">Jetski — Rp700.000</option>
-<option value="300000">Paddleboard Single — Rp300.000</option>
-<option value="350000">Paddleboard Tandem — Rp350.000</option>
-<option value="250000">Drone Paddleboard — Rp250.000/baterai</option>
-<option value="500000">Surfing Lesson — Rp500.000</option>
-<option value="700000">Freediving — Rp700.000</option>
-<option value="1500000">Scuba Diving — Rp1.500.000</option>
-<option value="150000">Snorkeling — Rp150.000/orang</option>
-<option value="300000">Green Canyon — Paket Perahu — Rp300.000/perahu</option>
-<option value="150000">Green Canyon — Paket 1 Semi Bodyrafting — Rp150.000/orang</option>
-<option value="250000">Green Canyon — Paket 2 Bodyrafting Standard — Rp250.000/orang</option>
-<option value="275000">Green Canyon — Paket 3 Bodyrafting Longtrack — Rp275.000/orang</option>
-<option value="300000">Green Canyon — Paket 4 Fulltrack — Rp300.000/orang</option>
-</select></div></div>
-<div class="row"><div class="field"><label>TANGGAL</label><input id="tanggal" type="date" required></div><div class="field"><label>JUMLAH ORANG / UNIT</label><input id="jumlah" type="number" min="1" value="2" required oninput="updatePrice()"></div></div>
-<div class="field"><label>CATATAN</label><textarea id="catatan" rows="3" placeholder="Permintaan khusus (opsional)"></textarea></div>
-<div class="total"><span>Estimasi total</span><strong id="total">Rp600.000</strong></div>
-<button class="btn" style="width:100%">Kirim Reservasi via WhatsApp</button>
-</form></div></div></section>
+<div class="card">
+<img src="freediving.jpg" alt="Freediving">
+<div class="card-content">
+<h3>Freediving</h3>
+<div class="price">Rp700.000</div>
+<p>Paket perjalanan dengan buddy dan dokumentasi underwater.</p>
+</div>
+</div>
 
-<section id="galeri"><div class="container"><div class="eyebrow">Moments</div><h2 class="title">Galeri perjalanan</h2><p class="sub">Tempat untuk menampilkan dokumentasi perjalanan pelanggan Batukaras Media.</p><div class="gallery">
-<div class="big" style="background-image:url('https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=1200&q=85')"></div>
-<div style="background-image:url('https://images.unsplash.com/photo-1502680390469-be75c86b636f?auto=format&fit=crop&w=700&q=80')"></div>
-<div style="background-image:url('https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=700&q=80')"></div>
-<div style="background-image:url('https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=700&q=80')"></div>
-<div style="background-image:url('https://images.unsplash.com/photo-1439405326854-014607f694d7?auto=format&fit=crop&w=700&q=80')"></div>
-</div></div></section>
+<div class="card">
+<img src="scuba.jpg" alt="Scuba Diving">
+<div class="card-content">
+<h3>Scuba Diving</h3>
+<div class="price">Rp1.500.000</div>
+<p>Paket dengan peralatan scuba, buddy, boat trip dan dokumentasi.</p>
+</div>
+</div>
 
-<footer><div class="container"><div class="foot"><div><h3>BATUKARAS MEDIA</h3><p>Travel • Adventure • Experience<br>Batukaras, Pangandaran, Jawa Barat.</p></div><div><h3>Reservasi</h3><p>WhatsApp: 0851-5501-2620<br>Instagram: @batukarasmedia<br>TikTok: @batukarasmedia</p></div></div><div class="copy">© 2026 Batukaras Media. All rights reserved.</div></div></footer>
-<a class="wa" href="https://wa.me/6285155012620" target="_blank">WhatsApp</a>
+<div class="card">
+<img src="greencanyon.jpg" alt="Green Canyon">
+<div class="card-content">
+<h3>Green Canyon</h3>
+<div class="price">Mulai Rp150.000/orang</div>
+<p>Pilihan wisata perahu dan beberapa paket perjalanan Green Canyon.</p>
+</div>
+</div>
+
+<div class="card">
+<img src="cycling.jpg" alt="Batukaras">
+<div class="card-content">
+<h3>Batukaras Experience</h3>
+<div class="price">Custom Trip</div>
+<p>Rencanakan pengalaman perjalanan bersama Batukaras Media.</p>
+</div>
+</div>
+
+</div>
+</section>
+
+<section class="booking" id="booking">
+<div class="subtitle">RESERVATION</div>
+<h2 class="title">Reservasi via WhatsApp</h2>
+
+<div class="form">
+
+<label>Nama</label>
+<input id="nama" placeholder="Nama lengkap">
+
+<label>Instagram</label>
+<input id="instagram" placeholder="@username">
+
+<label>TikTok</label>
+<input id="tiktok" placeholder="@username">
+
+<label>Tanggal</label>
+<input id="tanggal" type="date">
+
+<label>Waktu</label>
+<input id="waktu" type="time">
+
+<label>Pilih Paket</label>
+<select id="paket">
+<option value="">-- Pilih paket --</option>
+<option>Jetski — Rp700.000</option>
+<option>Banana Boat — Rp50.000/orang</option>
+<option>Gladiator — Rp75.000/orang</option>
+<option>Donat — Rp75.000/orang</option>
+<option>Paddleboard Single — Rp300.000</option>
+<option>Paddleboard Tandem — Rp350.000</option>
+<option>Freediving — Rp700.000</option>
+<option>Scuba Diving — Rp1.500.000</option>
+<option>Snorkeling Paket 1 — Rp150.000/orang</option>
+<option>Snorkeling Paket 2 — Rp100.000/orang</option>
+<option>Green Canyon — Paket Perahu</option>
+<option>Green Canyon — Semi Bodyrafting</option>
+<option>Green Canyon — Standard</option>
+<option>Green Canyon — Longtrack</option>
+<option>Green Canyon — Fulltrack</option>
+<option>Dokumentasi Drone</option>
+<option>Dokumentasi DJI Action</option>
+</select>
+
+<button class="submit" onclick="bookingWA()">RESERVASI VIA WHATSAPP</button>
+
+</div>
+</section>
+
+<footer>
+<h2>BATUKARAS MEDIA</h2>
+<p>Travel • Adventure • Experience</p>
+<p>Batukaras, Jawa Barat</p>
+</footer>
+
+<a class="wa" href="https://wa.me/6285155012620" target="_blank">
+WhatsApp
+</a>
+
 <script>
-function rupiah(n){return new Intl.NumberFormat('id-ID',{style:'currency',currency:'IDR',maximumFractionDigits:0}).format(n)}
-function updatePrice(){const p=Number(document.getElementById('paketSelect').value);const q=Number(document.getElementById('jumlah').value||1);document.getElementById('total').textContent=rupiah(p*q)}
-function book(e){e.preventDefault();const nama=document.getElementById('nama').value,wa=document.getElementById('wauser').value,dest=document.getElementById('dest').value,paket=document.getElementById('paketSelect').selectedOptions[0].text,tgl=document.getElementById('tanggal').value,jml=document.getElementById('jumlah').value,total=document.getElementById('total').textContent,cat=document.getElementById('catatan').value;const msg=`Halo Batukaras Media, saya ingin reservasi wisata.%0A%0ANama: ${nama}%0AWhatsApp: ${wa}%0ADestinasi: ${dest}%0APaket: ${paket}%0ATanggal: ${tgl}%0AJumlah: ${jml}%0AEstimasi total: ${total}%0ACatatan: ${cat||'-'}`;window.open('https://wa.me/6285155012620?text='+msg,'_blank')}
-updatePrice();
+function bookingWA(){
+const nama=document.getElementById('nama').value;
+const instagram=document.getElementById('instagram').value;
+const tiktok=document.getElementById('tiktok').value;
+const tanggal=document.getElementById('tanggal').value;
+const waktu=document.getElementById('waktu').value;
+const paket=document.getElementById('paket').value;
+
+if(!nama || !tanggal || !waktu || !paket){
+alert('Mohon lengkapi Nama, Tanggal, Waktu dan Paket.');
+return;
+}
+
+const pesan =
+'Halo Batukaras Media, saya ingin reservasi.%0A%0A'+
+'Nama: '+encodeURIComponent(nama)+
+'%0AInstagram: '+encodeURIComponent(instagram)+
+'%0ATikTok: '+encodeURIComponent(tiktok)+
+'%0ATanggal: '+encodeURIComponent(tanggal)+
+'%0AWaktu: '+encodeURIComponent(waktu)+
+'%0APaket: '+encodeURIComponent(paket)+
+'%0A%0AMohon informasi ketersediaannya.';
+
+window.open('https://wa.me/6285155012620?text='+pesan,'_blank');
+}
 </script>
-</body></html>
+
+</body>
+                                        </html>
